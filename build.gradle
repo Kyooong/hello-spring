@@ -1,0 +1,25 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.4'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'hello'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11' //java 11 version
+
+repositories {
+	mavenCentral() // public repository to download dependency
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'   // template engine
+	implementation 'org.springframework.boot:spring-boot-starter-web'         // web project
+	testImplementation('org.springframework.boot:spring-boot-starter-test') { // junit 5 version
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+test {
+	useJUnitPlatform()
+}

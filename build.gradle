@@ -14,7 +14,7 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'   // template engine
-	implementation 'org.springframework.boot:spring-boot-starter-web'         // web project
+	implementation 'org.springframework.boot:spring-boot-starter-web'         // web project (tomcat + mvc)
 	testImplementation('org.springframework.boot:spring-boot-starter-test') { // junit 5 version
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
